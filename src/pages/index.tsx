@@ -14,7 +14,7 @@ export interface IRoom {
 }
 
 const Index: NextPage = () => {
-  return <div className="flex-1 bg-red-50"></div>;
+  return <div className="flex-1"></div>;
 };
 
 export default Index;

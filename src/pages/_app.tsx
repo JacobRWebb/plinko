@@ -8,7 +8,7 @@ const App: AppComponent = ({ Component, ...pageProps }) => {
       <Head>
         <title>Header</title>
       </Head>
-      <div className="flex flex-col w-screen h-screen overflow-hidden">
+      <div className="flex flex-col w-screen h-screen overflow-hidden bg-white">
         <Component {...pageProps} />
       </div>
     </>
