@@ -1,5 +1,7 @@
 import { AppComponent } from "next/dist/shared/lib/router/router";
 import Head from "next/head";
+import Navbar from "../components/navbar";
+import { GlobalContextProvider } from "../globalContext";
 import "../styles/globals.css";
 
 const App: AppComponent = ({ Component, ...pageProps }) => {
@@ -8,9 +10,12 @@ const App: AppComponent = ({ Component, ...pageProps }) => {
       <Head>
         <title>Header</title>
       </Head>
-      <div className="flex flex-col w-screen h-screen overflow-hidden bg-white">
-        <Component {...pageProps} />
-      </div>
+      <GlobalContextProvider>
+        <div className="flex h-screen w-screen min-w-max flex-col overflow-hidden bg-white">
+          <Navbar />
+          <Component {...pageProps} />
+        </div>
+      </GlobalContextProvider>
     </>
   );
 };
