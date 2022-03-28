@@ -9,7 +9,7 @@ const App: AppComponent = ({ Component, ...pageProps }) => {
   return (
     <>
       <Head>
-        <title>Header</title>
+        <title>Cooperative Engaging Plinko</title>
       </Head>
       <StrictMode>
         <GlobalContextProvider>
